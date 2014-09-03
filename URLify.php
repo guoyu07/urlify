@@ -181,10 +181,7 @@ class URLify {
 	/**
 	 * Add new characters to the list. `$map` should be a hash.
 	 */
-	public static function add_chars ($map) {
-		if (! is_array ($map)) {
-			throw new LogicException ('$map must be an associative array.');
-		}
+	public static function add_chars (array $map) {
 		self::$maps[] = $map;
 		self::$map = array ();
 		self::$chars = '';
